@@ -1,28 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+     <transition name="router-anim" enter-active-class="animated fadeIn">
+        <router-view></router-view>
+     </transition>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+// import Navbar from "./components/Navbar.vue"
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+  },
+  data () {
+
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  -moz-osx-font-smoothing: grayscale; */
+  /*text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 60px; */
+
+  @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap')
 }
 </style>
