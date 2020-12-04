@@ -17,6 +17,7 @@ export default new Vuex.Store({
     mutations: {
         SET_ISLOGIN(state, payload){
             state.isLogin = payload
+            console.log(state.isLogin = payload)
         }
     },
     actions: {
@@ -30,9 +31,8 @@ export default new Vuex.Store({
                 }
             })
             .then(({data}) => {
-                console.log(data.data.nama)
-                localStorage.setItem('token', data.token)
                 this.commit('SET_ISLOGIN', true)
+                localStorage.setItem('token', data.token)
                 Swal.fire({
                     position: 'top-end',
                     showConfirmButton: false,
@@ -41,12 +41,10 @@ export default new Vuex.Store({
                     height: 50,
                     text: `Hallo ${data.data.nama}`
                 })
-                setTimeout(() => {
-                    alert('Berhasil')
-                }, 1000)
-                // router.push({
-                //     name:'Home'
-                // })
+
+                router.push({
+                    name:'Home'
+                })
             })
             .catch((err) => {
                 Swal.fire({

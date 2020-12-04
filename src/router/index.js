@@ -6,10 +6,15 @@ Vue.use(VueRouter);
 
 const BaseRouter = [
     {
+        path: '/home',
+        name: 'Home',
+        component: () => import(/* webpackChunkName: "about" */ '@/views/home/home')
+    },
+    {
         path: '/login',
 		name: 'Login',
-		component: () => import(/* webpackChunkName: "about" */ '@/components/login/login.vue')
-    }
+		component: () => import(/* webpackChunkName: "about" */ '@/views/auth/login')
+    },
 ];
 
 const routes = new VueRouter({

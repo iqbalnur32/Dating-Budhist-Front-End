@@ -122,15 +122,15 @@ export default {
                 password: this.password
             } 
             this.$store.dispatch('login', payload)           
-		},
-		signUp(){
-			const container = document.querySelector('.container1')
-			container.classList.add("sign-up-mode");
-		},
-		signIn(){
-			const container = document.querySelector('.container1')
-			container.classList.remove("sign-up-mode");
-		}
+		    },
+        signUp(){
+          const container = document.querySelector('.container1')
+          container.classList.add("sign-up-mode");
+        },
+        signIn(){
+          const container = document.querySelector('.container1')
+          container.classList.remove("sign-up-mode");
+        }
     },
     watch: {
         email(newValue, oldValue) {
